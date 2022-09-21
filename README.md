@@ -34,3 +34,4 @@ colorscheme night-owl to switch to the night owl theme
 Incase PlugInstall does not work, ensure you have PlugInstall installed first, this can be done in a few steps
 
 Any issues setting up you can reach out to me via email  at clingyking007@gmail.com
+#fine-tuned changes to my nvim config to improve both my workflow and generally to make it look way cool
