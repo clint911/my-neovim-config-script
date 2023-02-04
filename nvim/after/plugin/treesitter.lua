@@ -1,4 +1,5 @@
 require'nvim-treesitter.configs'.setup {
+    -- rainbow highlight 
   -- A list of parser names, or "all"
   ensure_installed = { "c", "javascript", "typescript", "lua", "rust" },
 
@@ -16,6 +17,6 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
 
     -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = true,
+    additional_vim_regex_highlighting = false,
   },
 }

@@ -21,9 +21,11 @@ use({
         vim.cmd('colorscheme rose-pine')
     end
 })
+--todo comments
+use('folke/todo-comments.nvim')
 --lualine 
 use('nvim-lualine/lualine.nvim')
---devicons 
+--devicons                           
 use('kyazdani42/nvim-web-devicons')
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('nvim-treesitter/playground')
