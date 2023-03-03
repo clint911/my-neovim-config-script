@@ -10,4 +10,3 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = function(_, _, result)
     end
   end
 end
-

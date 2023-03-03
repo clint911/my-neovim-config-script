@@ -10,10 +10,10 @@ return require('packer').startup(function(use)
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
 -- or                            , branch = '0.1.x',
-  requires = { {'nvim-lua/plenary.nvim'} } 
-} 
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
 
-                               
+
 use({
     'rose-pine/neovim',
     as = 'rose-pine',
@@ -21,16 +21,36 @@ use({
         vim.cmd('colorscheme rose-pine')
     end
 })
+--error messages
+--debugging
+use("mfussenegger/nvim-dap")
+use({ "rcarriga/nvim-dap-ui", requires={"mfussenegger/nvim-dap"}})
 --todo comments
-use('folke/todo-comments.nvim')
---lualine 
+use("kyazdani42/nvim-web-devicons")
+--autopairs and tags
+use("windwp/nvim-autopairs")
+use("windwp/nvim-ts-autotag")
+--
+  use({
+      "folke/trouble.nvim",
+      config = function()
+          require("trouble").setup {
+              icons = false,
+              -- your configuration comes here
+              -- or leave it empty to use the default settings
+              -- refer to the configuration section below
+          }
+      end
+  })
+--lualine
 use('nvim-lualine/lualine.nvim')
---devicons                           
-use('kyazdani42/nvim-web-devicons')
+--devicons
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('nvim-treesitter/playground')
+use("theprimeagen/refactoring.nvim")
 use('mbbill/undotree')
 use('tpope/vim-fugitive')
+use("nvim-treesitter/nvim-treesitter-context");
 use {
   'VonHeikemen/lsp-zero.nvim',
   requires = {
