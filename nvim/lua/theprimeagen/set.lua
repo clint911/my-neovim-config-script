@@ -1,4 +1,5 @@
 vim.opt.guicursor = ""
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
@@ -8,6 +9,7 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.cursorline = true
+
 
 vim.opt.smartindent = true
 
