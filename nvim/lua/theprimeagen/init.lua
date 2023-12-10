@@ -1,18 +1,10 @@
 require("theprimeagen.remap")
 require("theprimeagen.set")
-
 local augroup = vim.api.nvim_create_augroup
 local ThePrimeagenGroup = augroup('ThePrimeagen', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
-local lspconfig = require("lspconfig")
-lspconfig.solidity.setup({
-  cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
-  filetypes = { "solidity" },
-  root_dir = require("lspconfig.util").find_git_ancestor,
-  single_file_support = true,
-})
 
 function R(name)
   require("plenary.reload").reload_module(name)

@@ -6,11 +6,13 @@ end
 
 -- configure autopairs
 autopairs.setup({
-  check_ts = true, -- enable treesitter
+  check_ts = true,                      -- enable treesitter
   ts_config = {
-    lua = { "string" }, -- don't add pairs in lua string treesitter nodes
+    lua = { "string" },                 -- don't add pairs in lua string treesitter nodes
     javascript = { "template_string" }, -- don't add pairs in javscript template_string treesitter nodes
-    java = false, -- don't check treesitter on java
+    java = false,                       -- don't check treesitter on java
+    cpp = false,                        --lets see if this kills the cpp errorr
+    cc = false,                         --I think you see where we are going with this one
   },
 })
 

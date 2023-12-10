@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
     end
   })
   --trying rainbow parens
-  use('HiPhish/nvim-ts-rainbow2')
+  --  use('HiPhish/nvim-ts-rainbow2')
   --lualine
   use('nvim-lualine/lualine.nvim')
   --devicons
