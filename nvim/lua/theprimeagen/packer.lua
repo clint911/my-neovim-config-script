@@ -25,6 +25,14 @@ return require('packer').startup(function(use)
   --debugging
   use("mfussenegger/nvim-dap")
   use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+  --nvim-dap-vscode
+  use("mxsdev/nvim-dap-vscode-js")
+  ------some more magic
+  use {
+    "microsoft/vscode-js-debug",
+    opt = true,
+    run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+  }
   --todo comments
   use("kyazdani42/nvim-web-devicons")
   --terminal

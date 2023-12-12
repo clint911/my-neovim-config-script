@@ -1,18 +1,11 @@
 local dap = require('dap')
-dap.adapters.firefox = {
-  type = 'executable',
-  command = 'node',
-  args = { os.getenv('HOME') .. '/path/to/vscode-firefox-debug/dist/adapter.bundle.js' },
-}
 
-dap.configurations.typescript = {
-  {
-    name = 'Debug with Firefox',
-    type = 'firefox',
-    request = 'launch',
-    reAttach = true,
-    url = 'http://localhost:3000',
-    webRoot = '${workspaceFolder}',
-    firefoxExecutable = '/usr/bin/firefox'
-  }
-}
+-- Set keymaps to control the debugger
+vim.keymap.set('n', '<F5>', require 'dap'.continue)
+vim.keymap.set('n', '<F10>', require 'dap'.step_over)
+vim.keymap.set('n', '<F11>', require 'dap'.step_into)
+vim.keymap.set('n', '<F12>', require 'dap'.step_out)
+vim.keymap.set('n', '<leader>b', require 'dap'.toggle_breakpoint)
+vim.keymap.set('n', '<leader>B', function()
+  require 'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))
+end)
