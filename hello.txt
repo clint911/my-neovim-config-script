@@ -1,0 +1,1 @@
+sanity,configstore,gh,htop,ranger,qBittorrent,rstudio,fish,coc,bpytop,simple-update-notifier,valet,ranger
