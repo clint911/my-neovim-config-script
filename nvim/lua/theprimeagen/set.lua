@@ -5,7 +5,7 @@ vim.opt.relativenumber = true
 vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 vim.api.nvim_set_option("virtualedit", "all")
 
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
