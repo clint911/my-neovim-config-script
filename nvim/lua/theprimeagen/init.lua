@@ -78,14 +78,14 @@ vim.diagnostic.config({
   },
 })
 
---vim.g.netrw_browse_split = 0
---vim.g.netrw_banner = 2
---vim.g.netrw_winsize = 25
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 2
+vim.g.netrw_winsize = 25
 
 --I tried nvim-tree one last time
 -- disable netrw at the very start of your init.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+--vim.g.loaded_netrw = 1
+--vim.g.loaded_netrwPlugin = 1
 
 -- optionally enable 24-bit colour
 vim.opt.termguicolors = true

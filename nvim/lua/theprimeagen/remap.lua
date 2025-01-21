@@ -60,5 +60,5 @@ vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
 end)
  --some nvim-tree trial keymaps
-vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)
 
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
